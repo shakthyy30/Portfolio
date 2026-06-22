@@ -236,7 +236,7 @@ export default function Hero() {
                 <img
                   src={shakthiImg}
                   alt="Shakthi Logitha H"
-                  className="w-full h-full object-cover object-[center_28%] transition-transform duration-700 ease-out group-hover/img:scale-105"
+                  className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover/img:scale-105"
                 />
                 
                 {/* Elegant overlay gradient on bottom */}
