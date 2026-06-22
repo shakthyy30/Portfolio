@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, ArrowRight, Download, MessageSquare, Briefcase } from 'lucide-react';
+import shakthiImg from '../assets/shakthi.jpg';
 
 const GithubIcon = ({ size = 20, className = "" }) => (
   <svg
@@ -230,45 +231,27 @@ export default function Hero() {
               {/* Glowing back-orb */}
               <div className="absolute inset-4 rounded-full bg-gradient-to-tr from-accent/20 to-red-500/5 dark:from-accent/30 dark:to-transparent blur-xl animate-float" />
 
-              {/* Main Tech Concept Graphic */}
-              <div className="absolute inset-6 rounded-2xl bg-neutral-900 border border-neutral-800 shadow-2xl p-6 overflow-hidden flex flex-col justify-between select-none">
-                {/* Header bar */}
-                <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
-                  <div className="flex space-x-1.5">
-                    <span className="w-3 h-3 rounded-full bg-red-500" />
-                    <span className="w-3 h-3 rounded-full bg-yellow-500" />
-                    <span className="w-3 h-3 rounded-full bg-green-500" />
+              {/* Profile Image Container with Premium Styling */}
+              <div className="absolute inset-6 rounded-2xl overflow-hidden shadow-2xl border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 group/img transition-all duration-500 hover:border-accent dark:hover:border-accent">
+                <img
+                  src={shakthiImg}
+                  alt="Shakthi Logitha H"
+                  className="w-full h-full object-cover object-[center_28%] transition-transform duration-700 ease-out group-hover/img:scale-105"
+                />
+                
+                {/* Elegant overlay gradient on bottom */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/20 pointer-events-none" />
+                
+                {/* Subtle name badge overlay */}
+                <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                  <div className="text-white text-left">
+                    <p className="text-xs font-semibold text-neutral-200">Shakthi Logitha H</p>
+                    <p className="text-[10px] text-neutral-400">B.Tech IT Student</p>
                   </div>
-                  <span className="text-[10px] font-mono text-neutral-500">shakthi.js</span>
-                </div>
-
-                {/* Code snippets mockup */}
-                <div className="flex-1 font-mono text-xs text-neutral-400 py-4 space-y-2">
-                  <div>
-                    <span className="text-red-500">const</span> student = &#123;
+                  <div className="flex items-center space-x-1 bg-black/40 backdrop-blur-md px-2 py-1 rounded-full border border-white/10 text-[9px] text-emerald-400 font-mono">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                    <span>Available</span>
                   </div>
-                  <div className="pl-4">
-                    name: <span className="text-amber-300">'Shakthi Logitha H'</span>,
-                  </div>
-                  <div className="pl-4">
-                    major: <span className="text-amber-300">'Information Tech'</span>,
-                  </div>
-                  <div className="pl-4">
-                    skills: [<span className="text-emerald-400">'MERN'</span>, <span className="text-emerald-400">'Python'</span>, <span className="text-emerald-400">'Cloud'</span>],
-                  </div>
-                  <div className="pl-4">
-                    status: <span className="text-blue-400">'Building Solutions'</span>
-                  </div>
-                  <div>&#125;;</div>
-                  <div className="pt-2 text-accent/80 font-bold">
-                    &gt; student.buildImpactfulApp()
-                  </div>
-                </div>
-
-                {/* Status indicator */}
-                <div className="flex items-center space-x-2 text-[10px] font-mono text-neutral-500 border-t border-neutral-800 pt-3">
-                  <span className="w-2 h-2 rounded-full bg-accent animate-ping" />
-                  <span>Developer active on port: 3000</span>
                 </div>
               </div>
 
